@@ -1,4 +1,4 @@
-const Box = ({imageSrc, title, para}) => {
+export const Box = ({imageSrc, title, para}) => {
     return (
         <div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10 mx-auto">
@@ -16,5 +16,3 @@ const Box = ({imageSrc, title, para}) => {
       </div>
     )
 }
-
-export default Box;
