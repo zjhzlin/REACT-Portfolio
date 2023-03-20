@@ -100,8 +100,6 @@ export const Home =  () => {
                   title="Beautiful Designs"
                   para="Creating elegant designs suited for your business"
                 />
-                <Box imageSrc={girl} title="hmmm.." para="hmmm..." />
-                <Box imageSrc={girl} />
               </section>
             </div>
           </div>
