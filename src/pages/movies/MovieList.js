@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Movie } from "./Movie";
 import { Filter } from "./Filter";
 import { useEffect } from "react";
+import tmdb from "../../images/tmdb.svg"
 
 export const MovieList = () => {
 
@@ -44,13 +45,19 @@ export const MovieList = () => {
 
     return (
         <>
-            <h3 className="text-center text-2xl py-2">What's popular?</h3>
+            <h3 className="text-center text-2xl py-2">What's popular now?</h3>
             <Filter filter={filter} setFilter={setFilter} />
             <ul className="grid gap-5 grid-cols-3">
                 {movies
                     .filter((movie) => (movie.title.toLowerCase().includes(filter.toLowerCase())))
                     .map((movie) => <Movie movie={movie} key={movie.id} config={config} />)}
             </ul>
+            <div className="flex justify-center gap-5 items-center">
+            <p className="text-right text-gray-500"> This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+            <img src = {tmdb} alt="tmdb" className="h-6 w-20"></img>
+            </div>
+      
+
         </>
     )
 }

@@ -12,6 +12,7 @@ export const Box = ({imageSrc, title, para}) => {
           <h4 className="py-4 text-teal-600">Tech stack</h4>
           <p className="text-gray-800 py-1">Java </p>
           <p className="text-gray-800 py-1">Python </p>
+          <p className="text-gray-800 py-1">REACT </p>
         </div>
       </div>
     )

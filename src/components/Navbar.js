@@ -13,7 +13,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-links" href="/project/movielist">
-                Project
+                Project - Movie Search
               </a>
             </li>
             <li className="nav-item">

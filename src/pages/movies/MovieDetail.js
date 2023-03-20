@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 const BASE_URL = "https://api.themoviedb.org/3/movie/"
@@ -41,13 +41,16 @@ export const MovieDetail = () => {
                     <h1 className="text-lg font-bold mb-5">{movie.title}</h1>
                     <p className="mb-5">
                         <span className = "font-bold">Description: </span>{movie.overview}</p>
-                    <ul>
+                    <ul className="flex gap-2"> 
+                        <div className="font-bold">Genres: </div>
                         {
                             movie.genres.map(
                                 (genre) => <li key={genre.id}>{genre.name}</li>
                             )
                         }
                     </ul>
+                    <p><span className="font-bold">Release Date: </span> {movie.release_date}</p>
+                    <Link to={`https://www.imdb.com/title/${movie.imdb_id}`} className = "font-bold"> IMDb page</Link>
                 </div>
 
             </div>

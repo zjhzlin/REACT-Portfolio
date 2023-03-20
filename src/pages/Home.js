@@ -26,7 +26,7 @@ export const Home =  () => {
             <div className={getDarkModeClasses("background")}>
               <section>
                 <nav className="py-10 mb-12 flex justify-between">
-                  <h1 className="text-xl font-sans">Lynn Portfolio</h1>
+                  <h1 className="text-xl font-sans">Portfolio</h1>
                   <ul className="flex items-center">
                     <li>
                       <BsFillMoonStarsFill
@@ -50,11 +50,10 @@ export const Home =  () => {
                   </h2>
                   <h3 className={`text-2xl py-2 ${getDarkModeClasses("h3")}`}>
                     {" "}
-                    Software Engineer
+                    Full-Stack Software Engineer
                   </h3>
                   <p className="text-md py-5 leading-8 text-gray-800">
-                    Adventurer, globe-trotter, scuba diver, freediver, jogger,
-                    swimmer ......
+
                   </p>
                 </div>
                 <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
@@ -83,7 +82,7 @@ export const Home =  () => {
                     Throughout my career, I have worked on a variety of projects,
                     from{" "}
                     <span className="text-teal-500">small-scale applications</span>{" "}
-                    to large enterprise-level systems. I have experience in all
+                    to <span className="text-teal-500">large enterprise-level systems</span>. I have experience in all
                     phases of the software development lifecycle, from requirements
                     gathering and design to testing and deployment.
                   </p>
@@ -101,7 +100,7 @@ export const Home =  () => {
                   title="Beautiful Designs"
                   para="Creating elegant designs suited for your business"
                 />
-                <Box imageSrc={girl} title="Whatever" para="hmmm..." />
+                <Box imageSrc={girl} title="hmmm.." para="hmmm..." />
                 <Box imageSrc={girl} />
               </section>
             </div>
