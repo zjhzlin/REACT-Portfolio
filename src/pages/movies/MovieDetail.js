@@ -25,7 +25,7 @@ export const MovieDetail = () => {
 
     useEffect(() => {
         getMovie()
-    }, [id])
+    }, [])
 
     if (!movie.title) return null
 
