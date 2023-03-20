@@ -12,20 +12,19 @@ export const MovieDetail = () => {
     const { id } = useParams()
     const [movie, setMovie] = useState({})
 
-    async function getMovie() {
-        try {
-            const response = await fetch(BASE_URL + id + API_KEY + process.env.REACT_APP_MOVIE_API)
-            const newMovie = await response.json()
-            setMovie(newMovie)
-            console.log(newMovie)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
     useEffect(() => {
+        async function getMovie() {
+            try {
+                const response = await fetch(BASE_URL + id + API_KEY + process.env.REACT_APP_MOVIE_API)
+                const newMovie = await response.json()
+                setMovie(newMovie)
+                console.log(newMovie)
+            } catch (error) {
+                console.log(error)
+            }
+        }
         getMovie()
-    }, [])
+    }, [id])
 
     if (!movie.title) return null
 
