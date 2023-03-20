@@ -2,7 +2,7 @@ export const Box = ({imageSrc, title, para}) => {
     return (
         <div>
         <div className="text-center shadow-lg p-10 rounded-xl my-10 mx-auto">
-          <img src={imageSrc} alt="girl" width={100} height={100} />
+          <img src={imageSrc} alt="girl" className="inline-block h-40 w-80" />
           <h3 className="text-lg font-medium pt-8 pb-2">
             {title}
           </h3>

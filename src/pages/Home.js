@@ -8,8 +8,10 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 import girl from "../images/girl.png";
+import sthgreat from  "../images/sthgreat.jpg";
 import { useState } from "react";
 import { Box } from "../components/Box";
+
 
 export const Home =  () => {
     const [darkMode, setDarkMode] = useState(false);
@@ -96,7 +98,7 @@ export const Home =  () => {
                   </p>
                 </div>
                 <Box
-                  imageSrc={girl}
+                  imageSrc={sthgreat}
                   title="Beautiful Designs"
                   para="Creating elegant designs suited for your business"
                 />
