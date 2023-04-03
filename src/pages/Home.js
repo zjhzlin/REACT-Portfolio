@@ -11,6 +11,7 @@ import girl from "../images/girl.png";
 import sthgreat from  "../images/sthgreat.jpg";
 import { useState } from "react";
 import { Box } from "../components/Box";
+import { Footer } from "../components/Footer";
 
 
 export const Home =  () => {
@@ -105,6 +106,7 @@ export const Home =  () => {
               </section>
             </div>
           </div>
+          <Footer />
         </>
       );
     }

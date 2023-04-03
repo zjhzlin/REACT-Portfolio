@@ -4,21 +4,19 @@ import { Filter } from "./Filter";
 import { useEffect } from "react";
 import tmdb from "../../images/tmdb.svg"
 
-export const MovieList = () => {
+export const MovieNowPlaying = () => {
 
     const [filter, setFilter] = useState("")
     const [movies, setMovies] = useState([])
     const [config, setConfig] = useState({})
 
-    const POPULAR_MOVIE_API = "https://api.themoviedb.org/3/movie/popular?language=en-UK&api_key="
-
-    // const NOW_PLAYING_API = "https://api.themoviedb.org/3/movie/now_playing?language=en-UK&region=GB?api_key="
+    const NOW_PLAYING_API = "https://api.themoviedb.org/3/movie/now_playing?language=en-UK&region=GB&api_key="
 
     const CONFIG_API = "https://api.themoviedb.org/3/configuration?api_key="
 
     async function getMovies() {
         try {
-            const response = await fetch(POPULAR_MOVIE_API + process.env.REACT_APP_MOVIE_API)
+            const response = await fetch(NOW_PLAYING_API + process.env.REACT_APP_MOVIE_API)
             const movies = await response.json()
             console.log(movies.results)
             setMovies(movies.results)
